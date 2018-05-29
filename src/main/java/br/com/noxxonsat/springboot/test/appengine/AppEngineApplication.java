@@ -17,4 +17,9 @@ public class AppEngineApplication {
 	public String hello() {
 		return "hello world!";
 	}
+	
+	@GetMapping("/teste")
+	public String teste() {
+		return "Aparecendo String de teste!";
+	}
 }

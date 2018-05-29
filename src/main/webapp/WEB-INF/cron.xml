@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+	<cron>
+		<url>/job/teste/boot?task=spring</url>
+		<description>task de teste para spring boot</description>
+		<schedule>every 1 minutes</schedule>
+		<timezone>America/Sao_Paulo</timezone>
+		<target>fila-teste-4</target>
+		<retry-parameters>
+			<min-backoff-seconds>10</min-backoff-seconds>
+			<max-doublings>10</max-doublings>
+		</retry-parameters>
+	</cron>
+</cronentries>

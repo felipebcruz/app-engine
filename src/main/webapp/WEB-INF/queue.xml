@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queue-entries>
+  
+  <total-storage-limit>20G</total-storage-limit>    
+
+  <!-- PUSH QUEUES -->
+  <queue>
+    <mode>push</mode>
+    <name>testeSpringBootPushQueue</name>
+    <rate>200/s</rate>
+    <bucket-size>200</bucket-size>
+    <max-concurrent-requests>20</max-concurrent-requests>
+	<target>fila-teste-4</target>
+  </queue>
+  
+  <!-- PULL QUEUES -->
+  <queue>
+    <mode>pull</mode>
+    <name>testeSpringBootPullQueue</name>
+	<acl>
+		<user-email>felipe@noxxonsat.com.br</user-email>
+		<writer-email>felipe@noxxonsat.com.br</writer-email>
+	</acl>
+  </queue>
+  
+</queue-entries>

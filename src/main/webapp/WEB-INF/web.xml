@@ -24,4 +24,23 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     <!-- END : Should not be necessary with SpringBootServletInitializer -->
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Jobs</web-resource-name>
+			<url-pattern>/job/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<security-constraint>
+        <web-resource-collection>
+			<web-resource-name>Todos</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
 </web-app>
